@@ -1,5 +1,6 @@
 # greynoise
 
+[![Gem Version](https://badge.fury.io/rb/greynoise.svg)](https://badge.fury.io/rb/greynoise)
 [![Build Status](https://travis-ci.com/ninoseki/greynoise.svg?branch=master)](https://travis-ci.com/ninoseki/greynoise)
 [![Coverage Status](https://coveralls.io/repos/github/ninoseki/greynoise/badge.svg?branch=master)](https://coveralls.io/github/ninoseki/greynoise?branch=master)
 [![CodeFactor](https://www.codefactor.io/repository/github/ninoseki/greynoise/badge)](https://www.codefactor.io/repository/github/ninoseki/greynoise)
