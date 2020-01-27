@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.greynoise.io/v2/noise/context/1.1.1.1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.greynoise.io
+      Key:
+      - "<GREYNOISE_API_KEY>"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Mon, 27 Jan 2020 12:18:45 GMT
+      Content-Length:
+      - '31'
+    body:
+      encoding: UTF-8
+      string: '{"error":"commonly spoofed ip"}'
+    http_version: 
+  recorded_at: Mon, 27 Jan 2020 12:18:46 GMT
+recorded_with: VCR 5.0.0
