@@ -18,7 +18,7 @@ gem install greynoise
 ```ruby
 require "greynoise"
 
-# when given nothing, it tries to load your API key via ENV["GREYNOISE_API_KEY"]
+# when given nothing, it tries to load your API key via ENV["GREYNOISE_API_KEY"] and `~/.config/greynoise/config`
 api = GreyNoise::API.new
 # or you can set it manually
 api = GreyNoise::API.new(key: YOUR_API_KEY)
