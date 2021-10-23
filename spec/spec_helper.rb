@@ -26,6 +26,8 @@ RSpec.configure do |config|
   end
 end
 
+ENV["GREYNOISE_API_KEY"] = "dummy" if ENV["GREYNOISE_API_KEY"].nil?
+
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock

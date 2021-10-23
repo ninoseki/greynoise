@@ -10,6 +10,8 @@ module GreyNoise
       @key = key
       @key ||= load_from_config
       @key ||= load_from_env
+
+      raise ArgumentError if @key.nil?
     end
 
     def experimental
@@ -37,7 +39,7 @@ module GreyNoise
       begin
         data = File.read(path)
         json = JSON.parse(data)
-        json.dig("api_key")
+        json["api_key"]
       rescue TypeError, JSON::ParserError => _e
         nil
       end

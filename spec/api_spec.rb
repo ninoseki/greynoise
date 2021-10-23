@@ -27,5 +27,15 @@ RSpec.describe GreyNoise::API do
         expect(api.key).to eq("bar")
       end
     end
+
+    context "when key is not set" do
+      before do
+        allow(ENV).to receive(:[]).with("GREYNOISE_API_KEY").and_return(nil)
+      end
+
+      it do
+        expect { described_class.new }.to raise_error(ArgumentError)
+      end
+    end
   end
 end

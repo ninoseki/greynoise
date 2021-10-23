@@ -9,7 +9,7 @@ module GreyNoise
     class Client
       HOST = "api.greynoise.io"
       VERSION = "v2"
-      BASE_URL = "https://#{HOST}/#{VERSION}"
+      BASE_URL = "https://#{HOST}/#{VERSION}".freeze
 
       attr_reader :key
 
@@ -55,7 +55,7 @@ module GreyNoise
               yield body
             end
           else
-            status = json ? json.dig("status") : body
+            status = json ? json["status"] : body
             raise Error, "Unsupported response code returned: #{code} - #{status}"
           end
         end
