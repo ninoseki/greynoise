@@ -7,6 +7,11 @@ RSpec.describe GreyNoise::Clients::Experimental, :vcr do
   describe "#gnql" do
     it do
       res = api.experimental.gnql(query)
+
+      open("/tmp/grey.json", "w") do |f|
+        f.write res.to_json
+      end
+
       expect(res).to be_a(Hash)
     end
   end
